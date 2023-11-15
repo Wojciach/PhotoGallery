@@ -30,12 +30,16 @@ function addContent(data) {
             console.log(this);
             this.classList.toggle("active");
             this.addEventListener('animationend', function() {
-                this.parentNode.removeChild(this);
+                this.remove();
             })
         };
 
+        var newDiv = document.createElement("div");
+        newDiv.classList.add("frame");
+        newDiv.appendChild(newImg);
+
         // Add the new img to the content div
-        content.appendChild(newImg);
+        content.appendChild(newDiv);
     });
 }
 
