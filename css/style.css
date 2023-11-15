@@ -1,0 +1,38 @@
+body {
+  background-color: grey;
+  width: 100%;
+}
+body p {
+  cursor: pointer;
+}
+body div#content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 3px;
+  width: 100%;
+}
+body div#content img {
+  margin: 10px;
+  width: auto;
+  height: auto;
+  transform-origin: 0% 100%;
+}
+body div#content img.active {
+  animation: slide 2s ease-in-out forwards;
+}
+
+@keyframes slide {
+  0% {
+    transform: rotateX(0);
+  }
+  50% {
+    transform: rotateX(-180deg) translateY(0);
+  }
+  70% {
+    transform: rotateX(-180deg) translateY(-100%);
+  }
+  100% {
+    transform: rotateX(-180deg) translateY(-100%);
+  }
+}/*# sourceMappingURL=style.css.map */
