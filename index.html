@@ -3,20 +3,23 @@
     <head>
         <meta charset="UTF-8">
         <title>Home</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
         <link rel="icon" href="https://cdn.onlinewebfonts.com/svg/img_203330.svg" type="image/x-icon">
         <link rel="stylesheet" href="./css/style.css" />
-        <script src="./js/js.js" defer></script>
-        <script src="./js/autoRun.js" defer></script>
+        <script src="./js/js.js" type="module" defer></script>
+        <script src="./js/autoRun.js" type="module" defer></script>
     </head>
 
     <body>
         <main>
-            <div id="logo"></div>
-            <article>
+            <div id="logo">
+                <img src="./logo/logo.svg" alt="">
+            </div>
+            <article id="videoAndPhotos">
                 <div id="photos"></div>
                 <video id="video" autoplay loop>
-                    <source src="https://wyrwoj.website/vidoe_resized_da2.mp4" type="video/mp4">
+                    
+                    Your browser does not support HTML5 video.
                 </video>
             </article>
         </main>
