@@ -1,0 +1,32 @@
+.animation2 {
+    animation: animation2 2s ease-in-out forwards;
+    transform-origin: 15% 15%;
+    z-index: 0;
+    }
+
+@keyframes animation2 {
+    0% {
+        transform: rotateZ(0);
+        z-index: 0;
+        opacity: 1;
+    }
+    25% {
+        transform: rotateZ(15deg) translateY(0);
+        z-index: 0;
+        opacity: 1;
+    }
+    50% {
+        transform: rotateZ(15deg) translateY(0);
+        z-index: 0;
+        opacity: 1;
+    }
+    70% {
+        transform: rotateZ(15deg) translate(25%, 100%);
+        z-index: 0;
+    }
+    100% {
+        transform: rotateZ(15deg) translate(25%, 100%);
+        z-index: 0;
+        opacity: 0;
+    }
+}

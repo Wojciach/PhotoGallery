@@ -1,0 +1,27 @@
+.animation1 {
+    animation: animation1 2s ease-in-out forwards;
+    transform-origin: 0% 100%;
+    }
+
+@keyframes animation1 {
+    0% {
+        transform: rotateX(0) skewY(0) ;
+        z-index: 0;
+        opacity: 1;
+    }
+    50% {
+        transform: rotateX(-180deg) translateY(0) skewX(-10deg);
+        z-index: 0;
+        opacity: 1;
+    }
+    70% {
+        transform: rotateX(-180deg) translateY(-100%) skewX(-10deg);
+        z-index: 0;
+        opacity: 0;
+    }
+    100% {
+        transform: rotateX(-180deg) translateY(-100%) skewX(-10deg);
+        z-index: 0;
+        opacity: 0;
+    }
+}
