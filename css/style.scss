@@ -1,6 +1,18 @@
 @import 'animations/animation1';
 @import 'animations/animation2';
 @import 'animations/animation3';
+$gold: rgb(176, 128, 24);
+$grey: rgb(51, 51, 51);
+:root {
+    --video-width: 960px;
+    --video-height: 540px;
+    --image-width: calc(var(--video-width) / 7);
+    --image-height: calc(var(--video-height) / 4);
+    @media (max-width: 720px) {
+        --video-width: 480px;
+        --video-height: 270px;
+    }
+}
 
 html {
     width: 100%;
@@ -15,12 +27,11 @@ html {
     justify-content: center;
     justify-items: center;
     text-align: center;
-    background-color: yellow;
-    //border: 10px solid blue;    
+    background-color: $grey;
     box-sizing: border-box;
     overflow-x: hidden;
     body {
-        width: 720px;
+        width: 100%;
         left: 0;
         height: auto;
         display: flex;
@@ -31,8 +42,8 @@ html {
         justify-content: center;
         justify-items: center;
         align-self: center;
-        background-color: grey;
-        border: 5px solid red;
+        background-color: $grey;
+        border: 5px solid $gold;
         box-sizing: border-box;
         align-self: center;
         text-align: center;
@@ -40,107 +51,86 @@ html {
         overflow-x: hidden;
         main {
             display: flex;
-            width: 720px;
+            width: 100%;
             position: relative;
             flex-direction: column;
             align-items: center;
             align-content: center;
             justify-content: center;
             justify-items: center;
-           // margin: auto;
             box-sizing: border-box;
-            background-color: yellowgreen;
-          //  border: 10px solid red;
+            background-color: $grey;
             overflow: hidden;
             #logo {
-                display: block;
-                position: relative;
-                
-                background-image: url("../logo/logo.svg");
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: center;
-                width: 90%;
-                height: 200px;
-                z-index: 2;
-                top: 0;
-                left: 0;
-            }
-            p {
-                cursor: pointer;
-            }
-            article {
                 display: flex;
                 position: relative;
-                 box-sizing: border-box;
+                justify-content: center;
+                width: 100%;
+                height: 100px;
+                z-index: 2;
+                &>img {
+                    display: block;
+                    position: relative;
+                    width: 50%;
+                    height: 50%;
+                    z-index: 2;
+                    object-fit: fill;
+                    margin: auto;
+                }
+            }
+            article#videoAndPhotos {
+                display: flex;
+                position: relative;
                 flex-direction: row;
                 flex-wrap: wrap;
                 align-items: center;
                 justify-content: center;
-                width: 720px;
-                height: auto;
-                background-color: red;
+                width: var(--video-width);
+                height: var(--video-height);
                 margin: auto;
-                
-                //   @media screen and (max-width: 720px) {
-                //        width: 600px;  
-                //    }
+                border-top: 5px solid $gold;
                 div#photos {
-                    //background-color: aqua;
                     display: flex;
                     box-sizing: border-box;
                     position: relative;
                     flex-direction: row;
                     flex-wrap: wrap;
-                    width: 720px;
+                    width: 100%;
                     z-index: 1;
-                    
                     margin: 0;
-                    //background-color: red;
                     >div.frame {
                         margin: 0;
                         box-sizing: border-box;
                         display: block;
                         position: relative;
-                        width: 102.85px;
-                        height: 99px;
+                        width: var(--image-width);
+                        height: var(--image-height);
                         background-color: transparent;
-                    //   border: 2px blue solid;
-                    //   @media screen and (max-width: 720px) {
-                    //       width: 85.71px;
-                    //       height: 82.5px;
-                    //    }
-
                     }
                     img {
-                        //transform: skewY(40deg);
                         display: block;
                         object-fit: cover;
                         position: absolute;
                         box-sizing: border-box;
                         width: 100%;
                         height: 100%;
-                        // transition: transform 1s ease-in-out;
                         z-index: 1;
                         &:hover {
-                            border: 3px solid rgba(255, 217, 0, 0.60);
-                            box-shadow: 1px 1px 10px 1px rgba(255, 217, 0, 0.3);
-                            z-index: 1;
+                            border: 3px solid $gold;
+                            box-shadow: 1px 1px 10px 1px $gold;
+                            z-index: 2;
                         }
                         &:active {
                             transform: scale(0.99);
                         }
-
                     }
                 }
             }
             #video {
                 position: absolute;
+                display: flex;
                 box-sizing: border-box;
-                //width: 720px;
-                width: 720px;
-                //height: 576px;
-                height: auto;
+                width: 100%;
                 z-index: 0;
             }
         }
