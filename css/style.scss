@@ -1,8 +1,10 @@
 @import 'animations/animation1';
 @import 'animations/animation2';
 @import 'animations/animation3';
+
 $gold: rgb(176, 128, 24);
 $grey: rgb(51, 51, 51);
+
 :root {
     --video-width: 960px;
     --video-height: 540px;
